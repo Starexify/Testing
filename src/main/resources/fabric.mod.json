@@ -22,7 +22,7 @@
 			"net.nova.testing.TestingClient"
 		],
 		"fabric-datagen": [
-			"net.nova.testing.TestingDataGenerator"
+			"net.nova.testing.DataGenerators"
 		]
 	},
 	"mixins": [
