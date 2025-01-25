@@ -20,7 +20,7 @@ public class Testing implements ModInitializer {
     @Override
     public void onInitialize() {
         Item TEMPLATE_SHIELD_1 = registerItem("template_shield_1", ShieldItem::new);
-        Item TEMPLATE_SHIELD_2 = registerItem("template_shield_2", TemplateShieldItem::new);
+
     }
 
     public static Item registerItem(String name, Function<Item.Settings, Item> factory) {
