@@ -1,6 +1,7 @@
 package net.nova.testing;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Identifier;
 import net.nova.testing.init.TesStatusEffects;
 import org.slf4j.Logger;
@@ -15,7 +16,7 @@ public class Testing implements ModInitializer {
         TesStatusEffects.init();
     }
 
-    public static Identifier rl(String path) {
-        return Identifier.of(MODID, path);
+    public static ResourceLocation rl(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 }
