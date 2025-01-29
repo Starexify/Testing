@@ -11,7 +11,6 @@ public class Testing {
     public static final String MODID = "testing";
 
     public Testing(IEventBus bus) {
-
     }
 
     public static ResourceLocation rl(String path) {
