@@ -23,16 +23,16 @@ public class TestDamageTypesProvider extends FabricDynamicRegistryProvider {
         entries.addAll(lookup.getOrThrow(RegistryKeys.DAMAGE_TYPE));
     }
 
-    @Override
-    public String getName() {
-        return "Test Damage Types Provider";
-    }
-
     public interface TestDamageTypes {
         RegistryKey<DamageType> TEST_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(MODID, "test_damage_type"));
 
         static void bootstrap(Registerable<DamageType> damageTypeRegisterable) {
             damageTypeRegisterable.register(TEST_DAMAGE_TYPE, new DamageType("test_damage_type", 0.1F));
         }
+    }
+
+    @Override
+    public String getName() {
+        return "Test Damage Types Provider";
     }
 }
