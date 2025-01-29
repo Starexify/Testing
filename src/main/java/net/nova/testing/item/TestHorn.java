@@ -1,4 +1,4 @@
-package net.nova.item;
+package net.nova.testing.item;
 
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.LivingEntity;

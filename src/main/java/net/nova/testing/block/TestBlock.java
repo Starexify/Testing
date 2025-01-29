@@ -1,4 +1,4 @@
-package net.nova.block;
+package net.nova.testing.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
