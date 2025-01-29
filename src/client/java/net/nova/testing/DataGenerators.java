@@ -18,6 +18,6 @@ public class DataGenerators implements DataGeneratorEntrypoint {
 
     @Override
     public void buildRegistry(RegistryBuilder builder) {
-        builder.addRegistry(RegistryKeys.DAMAGE_TYPE, TestDamageTypesProvider.TestDamageTypes::bootstrap);
+        builder.addRegistry(RegistryKeys.DAMAGE_TYPE, TestDamageTypesProvider::bootstrap);
     }
 }
