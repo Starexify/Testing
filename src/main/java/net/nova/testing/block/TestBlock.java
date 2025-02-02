@@ -12,7 +12,9 @@ import net.minecraft.world.World;
 
 public class TestBlock extends Block {
     public TestBlock(Settings settings) {
-        super(settings);
+        super(settings
+                // Makes the block no longer look solid (used for not showing the shadow under it)
+                .nonOpaque());
     }
 
     /// This function is called when an entity interacts with the block (such as right-clicking it)
