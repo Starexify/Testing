@@ -1,7 +1,7 @@
 package net.nova.testing;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +13,7 @@ public class Testing implements ModInitializer {
     public void onInitialize() {
     }
 
-    public static Identifier rl(String path) {
-        return Identifier.of(MODID, path);
+    public static ResourceLocation rl(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 }
