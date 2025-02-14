@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.nova.testing.data.TestDamageTypesProvider;
+import net.nova.testing.data.models.TestModelProvider;
 import net.nova.testing.data.recipe.TestRecipeProvider;
 import net.nova.testing.data.tags.TestDamageTypeTagProvider;
 
@@ -15,6 +16,7 @@ public class DataGenerators implements DataGeneratorEntrypoint {
 
         // Generating the data/assets
         pack.addProvider(TestRecipeProvider::new);
+        pack.addProvider(TestModelProvider::new);
         pack.addProvider(TestDamageTypesProvider::new);
         pack.addProvider(TestDamageTypeTagProvider::new);
     }
