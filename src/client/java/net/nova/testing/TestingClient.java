@@ -5,5 +5,7 @@ import net.fabricmc.api.ClientModInitializer;
 public class TestingClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+		// Register custom EntityRenderers
+		//EntityRendererRegistry.register(EntityType.ENTITY, EntityRenderer::new);
 	}
 }
