@@ -1,6 +1,9 @@
 package net.nova.testing;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityType;
+import net.fabricmc.fabric.impl.object.builder.ExtendedBlockEntityType;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +14,9 @@ public class Testing implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        // Add additional blocks to a BlockEntityType entry
+        //BlockEntityType.SIGN.addSupportedBlock(block);
+
     }
 
     public static Identifier rl(String path) {
