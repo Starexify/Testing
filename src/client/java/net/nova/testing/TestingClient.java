@@ -8,7 +8,8 @@ public class TestingClient implements ClientModInitializer {
 		// Register custom EntityRenderers
 		//EntityRendererRegistry.register(EntityType.ENTITY, EntityRenderer::new);
 
-		// Render stuff on the InGameHud
+		// Render stuff on the InGameHud (use HudLayerRegistrationCallback)
+		//HudLayerRegistrationCallback.EVENT.register(layeredDrawerWrapper -> );
 		//HudRenderCallback.EVENT.register((drawContext, tickCounter) -> );
 	}
 }
