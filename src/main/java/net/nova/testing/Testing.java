@@ -2,7 +2,6 @@ package net.nova.testing;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Identifier;
 import net.nova.testing.init.TesStatusEffects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
