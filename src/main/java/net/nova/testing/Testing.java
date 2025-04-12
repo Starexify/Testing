@@ -11,6 +11,7 @@ public class Testing implements ModInitializer {
 
     @Override
     public void onInitialize() {
+
     }
 
     public static ResourceLocation rl(String path) {
