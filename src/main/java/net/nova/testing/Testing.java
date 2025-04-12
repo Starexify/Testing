@@ -16,6 +16,6 @@ public class Testing implements ModInitializer {
     }
 
     public static ResourceLocation rl(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+        return ResourceLocation.of(MODID, path);
     }
 }

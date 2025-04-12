@@ -5,6 +5,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.item.SwordItem;
 import net.nova.testing.effects.FlyingStatusEffect;
 
 public class TesStatusEffects {
@@ -17,6 +18,6 @@ public class TesStatusEffects {
     }
 
     public static void init() {
-
+        SwordItem
     }
 }
