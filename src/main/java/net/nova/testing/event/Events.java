@@ -17,10 +17,12 @@ public class Events {
     }
 
     // Lets you add new Blocks to Block Entities
+/*
     @SubscribeEvent
     public static void addBlockToBE(BlockEntityTypeAddBlocksEvent event) {
         // event.modify(BlockEntityType.HANGING_SIGN, Blocks.LIGHT_BLUE_WOOL);
     }
+*/
 
     // Lets you fire logic on Entity constructor
     @SubscribeEvent
