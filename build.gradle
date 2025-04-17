@@ -1,43 +1,31 @@
 plugins {
-    id 'fabric-loom' version '1.10-SNAPSHOT'
-    id 'maven-publish'
+    id "fabric-loom" version "1.10-SNAPSHOT"
+    id "legacy-looming" version "1.10-SNAPSHOT"
+    id "maven-publish"
 }
 
+base.archivesName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
-base {
-    archivesName = project.archives_base_name
-}
-
-repositories {
-}
+repositories {}
 
 loom {
-    splitEnvironmentSourceSets()
-
-    mods {
-        "testing" {
-            sourceSet sourceSets.main
-            sourceSet sourceSets.client
+    runs {
+        client {
+            programArgs "--userProperties", "{}"
         }
     }
-
 }
 
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
-}
+legacyLooming {}
 
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
-    mappings loom.officialMojangMappings()
+    mappings legacy.yarn(project.minecraft_version, project.yarn_build)
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
+    modImplementation "net.legacyfabric.legacy-fabric-api:legacy-fabric-api:${project.fabric_version}"
 }
 
 processResources {
@@ -49,14 +37,17 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 21
+    it.options.encoding = "UTF-8"
+    if (JavaVersion.current().isJava9Compatible()) {
+        it.options.release = 8
+    }
 }
 
 java {
     withSourcesJar()
 
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 jar {
@@ -67,8 +58,7 @@ jar {
 
 publishing {
     publications {
-        create("mavenJava", MavenPublication) {
-            artifactId = project.archives_base_name
+        mavenJava(MavenPublication) {
             from components.java
         }
     }
